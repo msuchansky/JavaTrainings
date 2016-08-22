@@ -4,11 +4,8 @@
  * and open the template in the editor.
  */
 package numbersmagic;
-import java.util.Calendar;
-import java.util.Locale;
 
-import java.util.Calendar;
-import java.util.Locale;
+
 
 
 // The following program shows some of the 
@@ -34,10 +31,10 @@ public class TestFormat {
                         "%-10.4f%n%n", pi); // -->  "3,1416"
 
       Calendar c = Calendar.getInstance();
-      System.out.format("%tB %te, %tY%n", c, c, c); // -->  "May 29, 2006"
+      System.out.format("%tB %te, %tY%n", c, c, c); // -->  "Month 00, 0000"
 
-      System.out.format("%tl:%tM %tp%n", c, c, c);  // -->  "2:34 am"
+      System.out.format("%tl:%tM %tp%n", c, c, c);  // -->  "0:00 am/pm"
 
-      System.out.format("%tD%n", c);    // -->  "05/29/06"
+      System.out.format("%tD%n", c);    // -->  "00/00/00"
     }
 }
