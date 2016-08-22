@@ -10,6 +10,10 @@ import java.util.Locale;
 import java.util.Calendar;
 import java.util.Locale;
 
+
+// The following program shows some of the 
+      // formatting that you can do with format. 
+      // The output is shown within double quotes in the embedded comment:
 public class TestFormat {
     
     public static void main(String[] args) {

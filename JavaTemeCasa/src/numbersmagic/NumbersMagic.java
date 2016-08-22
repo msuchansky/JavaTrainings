@@ -52,13 +52,12 @@ double a = -191.635;
                           x, Math.sqrt(x));  
         /* Display in console 3  generated numbers between 1 and 10
                 */
-        System.out.println(Math.random() * 1 );
-        System.out.println(Math.random() * 1 );
-        System.out.println(Math.random() * 1 );
+        System.out.format("%.0f%n", Math.random() * 10);
+        System.out.format("%.0f%n", Math.random() * 10);
+        System.out.format("%.0f%n", Math.random() * 10);
+
         
-      // The following program shows some of the 
-      // formatting that you can do with format. 
-      // The output is shown within double quotes in the embedded comment:
+      
       
       
  }
