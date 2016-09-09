@@ -13,7 +13,7 @@ import java.util.LinkedList;
  */
 public class LibraryCatalog {
     
-        private LinkedList listOfBooks;
+        private LinkedList listOfBooks = new LinkedList();
 
     /**
      * Get the value of listOfBooks
