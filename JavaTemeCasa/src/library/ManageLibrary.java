@@ -9,8 +9,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.logging.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.lf5.DefaultLF5Configurator;
+import java.util.logging.Logger;
+//import org.apache.log4j.Logger;
+//import org.apache.log4j.lf5.DefaultLF5Configurator;
 
 /**
  * File contains class ManageLibrary which tests our library
@@ -18,7 +19,7 @@ import org.apache.log4j.lf5.DefaultLF5Configurator;
  */
 public class ManageLibrary {
     // create a logger or logging manager for my class 
-    private static final Logger LOGGER = Logger.getLogger(ManageLibrary.class);
+    private static final Logger LOGGER = Logger.getLogger("ManageLibrary");
     // creates library catalogue 
     static LibraryCatalog raft = new LibraryCatalog();
     
@@ -50,12 +51,8 @@ public class ManageLibrary {
      */
     public static void main(String[] args) {
         
-        try {
-            // Configure default configurator
-            DefaultLF5Configurator.configure();
-        } catch (IOException ex) {
-            LOGGER.fatal("Default configurator cannot be configured.", ex);
-        }
+        
+        
         
         
         
@@ -110,7 +107,7 @@ public class ManageLibrary {
         // delete a book and siaply again 
         
         raft.deleteBook(album3);
-        LOGGER.warn("Art Album Deleted: " + album3.getTitle());
+        //LOGGER.warn("Art Album Deleted: " + album3.getTitle());
        
         // Display all books  
         raft.displayAllBooks();

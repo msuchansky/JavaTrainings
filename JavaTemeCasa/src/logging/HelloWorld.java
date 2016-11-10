@@ -4,8 +4,9 @@
 package logging;
 
 import java.io.IOException;
-import org.apache.log4j.Logger;
-import org.apache.log4j.lf5.DefaultLF5Configurator;
+import java.util.logging.Logger;
+//import org.apache.log4j.Logger;
+//import org.apache.log4j.lf5.DefaultLF5Configurator;
 
 
 /**
@@ -15,22 +16,22 @@ import org.apache.log4j.lf5.DefaultLF5Configurator;
     
 public class HelloWorld {
     // create a logger or logging manager for my class 
-    private static final Logger LOGGER = Logger.getLogger(HelloWorld.class);
+    private static final Logger LOGGER = Logger.getLogger("HelloWorld");
     /**
      * @param args the command line arguments
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException {
         // Configure default configurator 
-        DefaultLF5Configurator.configure();
+        //DefaultLF5Configurator.configure();
         // Call Different log4j methods 
 
         LOGGER.info("Hello, World!");
-        LOGGER.debug("Hello, my name is Homer Simpson.");
-        LOGGER.debug("Hello, my name is Lisa Simpson.");
-        LOGGER.debug("Hello, my name is Marge Simpson.");
-        LOGGER.debug("Hello, my name is Bart Simpson.");
-        LOGGER.debug("Hello, my name is Maggie Simpson.");
+        LOGGER.warning("Hello, my name is Homer Simpson.");
+        LOGGER.warning("Hello, my name is Lisa Simpson.");
+        LOGGER.warning("Hello, my name is Marge Simpson.");
+        LOGGER.warning("Hello, my name is Bart Simpson.");
+        LOGGER.warning("Hello, my name is Maggie Simpson.");
 
         LOGGER.info("We are the Simpsons!");
         LOGGER.info("Mmmmmm .... Chocolate.");
@@ -38,28 +39,24 @@ public class HelloWorld {
         LOGGER.info("Doh!");
         LOGGER.info("We are the Simpsons!");
 
-        LOGGER.warn("Bart: I am through with working! Working is for chumps!" +
+        LOGGER.warning("Bart: I am through with working! Working is for chumps!" +
                 "Homer: Son, I'm proud of you. I was twice your age before " +
                 "I figured that out.");
-        LOGGER.warn("Mmm...forbidden donut.");
-        LOGGER.warn("D'oh! A deer! A female deer!");
-        LOGGER.warn("Truly, yours is a butt that won't quit." +
+        LOGGER.warning("Mmm...forbidden donut.");
+        LOGGER.warning("D'oh! A deer! A female deer!");
+        LOGGER.warning("Truly, yours is a butt that won't quit." +
                 "- Bart, writing as Woodrow to Ms. Krabappel.");
 
-        LOGGER.error("Dear Baby, Welcome to Dumpsville. Population: you.");
-        LOGGER.error("Dear Baby, Welcome to Dumpsville. Population: you.",
-                new IOException("Dumpsville, USA"));
-        LOGGER.error("Mr. Hutz, are you aware you're not wearing pants?");
-        LOGGER.error("Mr. Hutz, are you aware you're not wearing pants?",
-                new IllegalStateException("Error !!"));
+        LOGGER.severe("Dear Baby, Welcome to Dumpsville. Population: you.");
+        LOGGER.severe("Dear Baby, Welcome to Dumpsville. Population: you.");
+        LOGGER.severe("Mr. Hutz, are you aware you're not wearing pants?");
+        LOGGER.severe("Mr. Hutz, are you aware you're not wearing pants?");
 
 
-        LOGGER.fatal("Eep.");
-        LOGGER.fatal("Mmm...forbidden donut.",
-                new SecurityException("Fatal Exception"));
-        LOGGER.fatal("D'oh! A deer! A female deer!");
-        LOGGER.fatal("Mmmmmm .... Chocolate.",
-                new SecurityException("Fatal Exception"));
+        LOGGER.severe("Eep.");
+        LOGGER.severe("Mmm...forbidden donut.");
+        LOGGER.severe("D'oh! A deer! A female deer!");
+        LOGGER.severe("Mmmmmm .... Chocolate.");
     }
     
 }
